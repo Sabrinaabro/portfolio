@@ -1,5 +1,5 @@
 "use client";
-import { FaLaptopCode, FaPalette, FaArrowUpRightFromSquare, FaBrain } from "react-icons/fa6";
+import { FaLaptopCode, FaPalette, FaBrain } from "react-icons/fa6";
 import { FaMobileAlt } from "react-icons/fa";
 import Image from "next/image";
 
@@ -45,31 +45,33 @@ const services: Service[] = [
 const Services = () => {
   return (
     <div className="relative bg-gray-50 py-12">
-       <div className="absolute top-0 right-0 w-40 md:w-64 opacity-70">
-        <Image
-          src="/pink.png" 
-          alt="Decorative"
-          width={300} 
-          height={300} 
-          className="object-contain"
-          priority
-        />
-        </div>
 
-        <div className="absolute bottom-0 left-0 w-40 md:w-64 opacity-70">
+      <div className="absolute top-0 right-0 w-40 md:w-64 opacity-70">
         <Image
-          src="/blue.png" 
+          src="/pink.png"
           alt="Decorative"
-          width={300} 
-          height={300} 
+          width={300}
+          height={300}
           className="object-contain"
           priority
         />
-        </div>
-     
+      </div>
+
+      <div className="absolute bottom-0 left-0 w-40 md:w-64 opacity-70">
+        <Image
+          src="/blue.png"
+          alt="Decorative"
+          width={300}
+          height={300}
+          className="object-contain"
+          priority
+        />
+      </div>
+
+      
       <div className="relative z-20 text-left mb-8 max-w-6xl mx-auto">
-        {/* Header */}
-        <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-purple-500 via-yellow-500 to-pink-500 bg-clip-text text-transparent text-left">
+        
+        <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-purple-500 via-yellow-500 to-pink-500 bg-clip-text text-transparent text-left typing-text">
           Solutions Tailored For You
         </h2>
 
@@ -78,7 +80,8 @@ const Services = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className={`p-4 rounded-xl shadow-md transition-transform transform hover:scale-105 text-[#8e6865] ${service.bgColor}`}
+              className={`service-card p-4 rounded-xl shadow-md text-[#8e6865] ${service.bgColor}`}
+              style={{ animationDelay: `${index * 0.2}s` }} 
             >
               <div className="flex flex-col items-center text-center">
                 {service.icon}

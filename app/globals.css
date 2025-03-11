@@ -148,14 +148,14 @@
   animation-delay: 0.3s;
 }
 
-/* Typing animation improvements */
+
 .typing-list {
   list-style: none;
   padding: 0;
   margin: 0;
   position: relative;
-  height: 40px; /* Fixed height for smoother transitions */
-  overflow: hidden; /* Hide overflow for a cleaner effect */
+  height: 40px; 
+  overflow: hidden; 
 }
 
 .typing-list li {
@@ -163,7 +163,7 @@
   white-space: nowrap;
   overflow: hidden;
   position: absolute;
-  animation: typing 3s steps(30) forwards, fade 15s infinite; /* Updated fade timing for smooth transitions */
+  animation: typing 3s steps(30) forwards, fade 15s infinite; 
 }
 
 .typing-list li:nth-child(1) {
@@ -185,7 +185,6 @@
   animation-delay: 12.5s;
 }
 
-/* Typing effect */
 @keyframes typing {
   0% {
     width: 0;
@@ -197,11 +196,10 @@
   }
   100% {
     width: 100%;
-    opacity: 0; /* Make text vanish smoothly */
+    opacity: 0; 
   }
 }
 
-/* Fade effect for infinite looping */
 @keyframes fade {
   0%, 18%, 100% {
     opacity: 0;
@@ -211,15 +209,13 @@
   }
 }
 
-
-/* 🌟 Responsive Styles */
 @media (max-width: 1024px) {
   body {
     font-size: 15px;
     padding-top: 50px;
   }
   .typing-list {
-    height: 35px; /* Adjust height for tablets */
+    height: 35px;
   }
   .banner-title {
     font-size: 48px;
@@ -243,10 +239,10 @@
   }
 
   .typing-list {
-    height: 30px; /* Adjust height for mobile */
+    height: 30px; 
   }
   .typing-list li {
-    animation: typing 1.8s steps(20) forwards, fade 15s infinite; /* Adjust timing for smaller screens */
+    animation: typing 1.8s steps(20) forwards, fade 15s infinite; 
   }
   .banner-title {
     font-size: 38px;
@@ -273,10 +269,10 @@
     padding-top: 80px;
   }
   .typing-list {
-    height: 25px; /* Adjust height for mobile */
+    height: 25px; 
   }
   .typing-list li {
-    font-size: 0.875rem; /* Smaller font size for mobile */
+    font-size: 0.875rem; 
   }
   .banner-title {
     font-size: 28px;
@@ -297,7 +293,7 @@
   }
 
   .grid-cols-3 {
-    grid-template-columns: 1fr; /* Stack columns vertically */
+    grid-template-columns: 1fr; 
     gap: 20px;
   }
 }
@@ -321,3 +317,49 @@
     }
   }
 
+  /* Fade-in and hover animation for service cards */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.service-card {
+  animation: fadeInUp 0.8s ease-in-out forwards;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Typing animation for heading */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.typing-text {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+ 
+  width: 0;
+  animation: typing 2s steps(20, end) forwards, blink 0.7s infinite;
+}
