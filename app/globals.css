@@ -127,3 +127,197 @@
     @apply bg-background text-foreground;
   }
 }
+
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.8s ease-out forwards;
+}
+
+.animate-fade-in-delay {
+  animation: fade-in-up 1s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+/* Typing animation improvements */
+.typing-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  height: 40px; /* Fixed height for smoother transitions */
+  overflow: hidden; /* Hide overflow for a cleaner effect */
+}
+
+.typing-list li {
+  opacity: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  position: absolute;
+  animation: typing 3s steps(30) forwards, fade 15s infinite; /* Updated fade timing for smooth transitions */
+}
+
+.typing-list li:nth-child(1) {
+  animation-delay: 0s;
+}
+.typing-list li:nth-child(2) {
+  animation-delay: 2.5s;
+}
+.typing-list li:nth-child(3) {
+  animation-delay: 5s;
+}
+.typing-list li:nth-child(4) {
+  animation-delay: 7.5s;
+}
+.typing-list li:nth-child(5) {
+  animation-delay: 10s;
+}
+.typing-list li:nth-child(6) {
+  animation-delay: 12.5s;
+}
+
+/* Typing effect */
+@keyframes typing {
+  0% {
+    width: 0;
+    opacity: 1;
+  }
+  70% {
+    width: 100%;
+    opacity: 1;
+  }
+  100% {
+    width: 100%;
+    opacity: 0; /* Make text vanish smoothly */
+  }
+}
+
+/* Fade effect for infinite looping */
+@keyframes fade {
+  0%, 18%, 100% {
+    opacity: 0;
+  }
+  8%, 16% {
+    opacity: 1;
+  }
+}
+
+
+/* 🌟 Responsive Styles */
+@media (max-width: 1024px) {
+  body {
+    font-size: 15px;
+    padding-top: 50px;
+  }
+  .typing-list {
+    height: 35px; /* Adjust height for tablets */
+  }
+  .banner-title {
+    font-size: 48px;
+  }
+
+  .certification-badge {
+    font-size: 12px;
+    padding: 3px 6px;
+  }
+
+  .skill-logo {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 10px;
+    padding-top: 50px;
+  }
+
+  .typing-list {
+    height: 30px; /* Adjust height for mobile */
+  }
+  .typing-list li {
+    animation: typing 1.8s steps(20) forwards, fade 15s infinite; /* Adjust timing for smaller screens */
+  }
+  .banner-title {
+    font-size: 38px;
+  }
+
+  .certification-badge {
+    font-size: 11px;
+    padding: 2px 5px;
+  }
+
+  .skill-logo {
+    width: 35px;
+    height: 35px;
+  }
+
+  .banner-container {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 640px) {
+  body {
+    font-size: 8px;
+    padding-top: 80px;
+  }
+  .typing-list {
+    height: 25px; /* Adjust height for mobile */
+  }
+  .typing-list li {
+    font-size: 0.875rem; /* Smaller font size for mobile */
+  }
+  .banner-title {
+    font-size: 28px;
+  }
+
+  .certification-badge {
+    font-size: 10px;
+    padding: 2px 4px;
+  }
+
+  .skill-logo {
+    width: 30px;
+    height: 30px;
+  }
+
+  .banner-container {
+    padding: 10px;
+  }
+
+  .grid-cols-3 {
+    grid-template-columns: 1fr; /* Stack columns vertically */
+    gap: 20px;
+  }
+}
+@media (max-width: 320px) {
+    .banner-title {
+      font-size: 24px;
+    }
+  
+    .certification-badge {
+      font-size: 9px;
+      padding: 1px 3px;
+    }
+  
+    .skill-logo {
+      width: 25px;
+      height: 25px;
+    }
+  
+    .banner-container {
+      padding: 8px;
+    }
+  }
+
