@@ -65,16 +65,7 @@ const Navbar = () => {
           >
             Projects
           </Link>
-          <Link
-            href="/resume"
-            className={`transition ${
-              pathname === "/resume"
-                ? "text-[#C3B091]"
-                : "hover:text-[#C3B091]"
-            }`}
-          >
-            Resume
-          </Link>
+          
         </div>
 
         <div className="hidden md:block">

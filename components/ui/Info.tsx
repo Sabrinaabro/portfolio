@@ -33,7 +33,7 @@ const Info = () => {
         
         <div className="md:w-1/2 max-w-sm mb-8 md:mb-0">
           <Image
-            src="/logo.png"
+            src="/about (2).jpg"
             alt="Personal"
             className="rounded-lg shadow-lg w-full h-auto"
             width={500}
@@ -44,10 +44,10 @@ const Info = () => {
 
       
         <div className="md:w-1/2">
-          <h4 className="text-gray-700 text-sm tracking-wider uppercase mb-2">
+          <h2 className="text-[#103783] font-bold text-sm tracking-wider uppercase mb-2">
             About Me
-          </h4>
-          <h2 className="text-3xl font-bold mb-4">Personal Details</h2>
+          </h2>
+          
           <p className="text-gray-800 leading-relaxed mb-6">
             Here, I focus on creating user-friendly websites that offer seamless experiences for users. 
             My passion for web development drives me to craft clean, responsive, and efficient interfaces using Next.js, Tailwind CSS, 

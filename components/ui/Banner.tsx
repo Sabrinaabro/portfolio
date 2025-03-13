@@ -42,16 +42,23 @@ const Banner = () => {
   return (
     <div className="relative">
     
-      <div className="relative z-20 text-center mb-8 -mt-10 grid grid-cols-3 gap-8 max-w-6xl mx-auto">
-        {/* Column 1: Experience with Counter */}
-        <div className="flex flex-col items-center">
-          <h2 className="text-[58px] font-semibold text-yellow-300 pt-15 leading-tight">
-            <span className="text-[#0070BB]">{count}+</span>
-            <span className="text-[24px] block text-[#1F305E]">
-              Years Of Experience
-            </span>
-          </h2>
-        </div>
+    <div className="relative z-20 text-center mb-8 -mt-10 grid grid-cols-3 gap-8 max-w-6xl mx-auto">
+  {/* Column 1: Experience with Counter */}
+  <div className="flex flex-col items-center">
+    <h2 className="text-[58px] font-semibold text-yellow-300 pt-15 leading-tight relative">
+      {/* Background Circle Behind Count */}
+      <span className="absolute -mb-10 left-21 transform -translate-x-1/2 w-16 h-16 bg-blue-300 rounded-full -z-10"></span>
+
+      {/* Count Number */}
+      <span className="text-[#0070BB] relative z-10">{count}+</span>
+
+      {/* Text Below */}
+      <span className="text-[24px] block text-[#1F305E]">
+        Years Of Experience
+      </span>
+    </h2>
+  </div>
+
 
         {/* Column 2: Certifications */}
 <div className="flex flex-col items-center">

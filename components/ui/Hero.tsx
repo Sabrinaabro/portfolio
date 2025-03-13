@@ -115,18 +115,18 @@ const Hero = () => {
 
       <div className="relative flex flex-col md:flex-row items-center justify-between px-8 pt-10 pb-20 z-10 animate-fade-in-up">
       <div className="max-w-lg pb-10 z-10">
-  <p className="text-lg text-gray-700 mt-4 animate-fade-in-delay">Hello I'm</p>
-  <h1 className="text-5xl text-[#36454F] leading-tight animate-fade-in-up">
+  <p className="text-lg text-[#ffa585] mt-4 animate-fade-in-delay">Hello I'm</p>
+  <h1 className="text-5xl text-[#ef709b] leading-tight animate-fade-in-up">
     Sabrina Abro
   </h1>
-  <ul className="text-lg font-bold text-[#555D50] mt-4 typing-list">
-    <li>Software Engineer</li>
-    <li>Web Designer</li>
-    <li>Full Stack Developer</li>
-    <li>UX/UI Developer</li>
-    <li>App Developer</li>
-    <li>ML/AI Enthusiast</li>
-  </ul>
+  <ul className="text-lg font-bold mt-4 typing-list">
+  {["Software Engineer", "Web Designer", "Full Stack Developer", "UX/UI Developer", "App Developer", "ML/AI Enthusiast"].map((item, index) => (
+    <li key={index} className="bg-gradient-to-r from-blue-500 via-red-500 to-pink-500 bg-clip-text text-transparent">
+      {item}
+    </li>
+  ))}
+</ul>
+
 
     <div className="mt-6 flex gap-4">
       <Link href="/about">
